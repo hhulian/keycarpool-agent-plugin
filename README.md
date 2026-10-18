@@ -6,7 +6,11 @@ Read your connected carpool schedules, driving turns and ride-change request sta
 
 For Grok web, open https://grok.com/connectors, choose New Connector → Custom, and enter https://www.keycarpool.com/api/agents/mcp. Complete OAuth on keycarpool.com using your own Key Carpool account. Select the pools you intend to share and approve read-only access. Check the requesting app and callback domain before approving.
 
-This portable Agent Plugins package contains only configuration and a logo; it has no executable, hooks, API key or shared credentials. Grok Bot catalog distribution and this package's installation path must be verified before advertising availability. A custom Grok web connection does not prove a Grok Bot catalog listing.
+For Grok Bot, configure a URL MCP in the Cursor dashboard's Plugins & MCPs page with the server identifier `keycarpool` and the same endpoint. Complete the browser OAuth flow with your own account and selected pools. In Grok Bot, type `@` and attach the connected app to your question. Grok web and Grok Bot use separate connections; connecting one does not connect the other.
+
+Use the exact simple server identifier `keycarpool` in custom configurations. In native QA, a display-style identifier containing spaces and an em dash reported five connected tools but failed namespace discovery. Renaming the same connection to `keycarpool` preserved its authorization and made all five schemas available. Do not guess tool arguments if discovery fails.
+
+This portable Agent Plugins package contains only configuration and a logo; it has no executable, hooks, API key or shared credentials. A custom Grok Bot connection has been tested; installing this repository through the public catalog has not. Marketplace review and publication remain separate from custom-connector availability.
 
 ## Try it
 
@@ -44,4 +48,4 @@ Operational usage records contain internal identifiers, tool names, outcomes and
 
 Prepared October 18, 2026. Grok web custom MCP testing passed with fictional pools: all five tools, selected-pool isolation, read-only limits, English and Spanish questions, and continued access beyond the original 15-minute token lifetime without signing in again. Local server checks passed 185 tests across 13 files. Reviewer activity is excluded from real-user adoption metrics.
 
-Native Grok Bot installation has not yet been verified. Grok Bot uses Cursor's plugin infrastructure; marketplace review and publication are separate from a working Grok web custom connector. This package is not a claim of marketplace approval or affiliation with xAI or Cursor.
+Native Grok Bot custom MCP authorization and all five read-only tools were exercised with the same fictional pools. After normalizing the server identifier to `keycarpool`, schema discovery and English/Spanish schedule questions passed without guessed inputs. Grok Bot uses Cursor's plugin infrastructure. This package is not a claim of marketplace approval, automatic Grok Bot catalog distribution, or affiliation with xAI or Cursor.
