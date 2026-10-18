@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "keycarpool",
+  "version": "1.0.0",
+  "description": "Read your connected Key Carpool schedules, driving turns and ride-change request status.",
+  "author": {
+    "name": "StartIQ LLC",
+    "email": "h@startiq.ai",
+    "url": "https://www.keycarpool.com"
+  },
+  "homepage": "https://www.keycarpool.com/agents",
+  "keywords": [
+    "carpool",
+    "rides",
+    "schedule",
+    "family",
+    "transportation"
+  ]
+}
